@@ -6,7 +6,7 @@
     <title>Mukunzi Clever | Software Engineer & Model</title>
     
     <!-- GOOGLE SEARCH CONSOLE VERIFICATION TAG -->
-   <meta name="google-site-verification" content="aOnnAh5WAXtnAQButGjML8dzlq210vYOaNWu6E07WpE" />
+    <meta name="google-site-verification" content="aOnnAh5WAXtnAQButGjML8dzlq210vYOaNWu6E07WpE" />
 
     <!-- GOOGLE KNOWLEDGE GRAPH SCHEMA CODE -->
     <script type="application/ld+json">
@@ -25,29 +25,271 @@
     </script>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f9;
-            color: #333;
-            text-align: center;
+        :root {
+            --bg: #030712;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #f9fafb;
+            --muted: #9ca3af;
+            --accent-blue: #38bdf8;
+            --accent-purple: #a78bfa;
         }
-        h1 { color: #111; margin-bottom: 5px; }
-        p { font-size: 1.2rem; color: #666; }
-        .links { margin-top: 20px; }
-        a { color: #0066cc; text-decoration: none; margin: 0 10px; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Abstract ambient background blur */
+        .glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(56,189,248,0.08) 0%, rgba(167,139,250,0.03) 70%, transparent 100%);
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .profile-title {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .profile-subtitle {
+            font-size: 1.1rem;
+            color: var(--muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* Interactive Dynamic Navigation Controls */
+        .tab-controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px;
+            border-radius: 30px;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            flex: 1;
+        }
+
+        .tab-btn.active {
+            background: var(--text);
+            color: var(--bg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Dynamic Panel Visibility rules */
+        .tab-panel {
+            display: none;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* Responsive UI Elements */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .card-header-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .glass-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .glass-card p {
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-blue { background: rgba(56, 189, 248, 0.1); color: var(--accent-blue); }
+        .badge-purple { background: rgba(167, 139, 250, 0.1); color: var(--accent-purple); }
+
+        .action-tray {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .social-anchor {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: background 0.2s ease;
+        }
+
+        .social-anchor:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Mukunzi Clever</h1>
-    <p>Software Development Engineer &amp; Model</p>
-    
-    <div class="links">
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://instagram.com" target="_blank">Instagram</a>
+    <div class="glow"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="profile-title">Mukunzi Clever</h1>
+            <p class="profile-subtitle">Software Engineer &amp; Model</p>
+        </header>
+
+        <!-- Dynamic Switcher Controls -->
+        <div class="tab-controls">
+            <button class="tab-btn active" onclick="switchTab('engineering')">Engineering</button>
+            <button class="tab-btn" onclick="switchTab('creative')">Creative Portfolio</button>
+        </div>
+
+        <!-- Engineering Panel -->
+        <div id="engineering" class="tab-panel active">
+            <div class="card-grid">
+                <div class="glass-card">
+                    <div class="card-header-group">
+                        <h3>Full-Stack Architectures</h3>
+                        <span class="badge badge-blue">Systems</span>
+                    </div>
+                    <p>Building high-performance software frameworks, designing relational data systems, and managing technical delivery across modular environments.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-header-group">
+                        <h3>Advanced Ecosystems &amp; Tooling</h3>
+                        <span class="badge badge-blue">Production</span>
+                    </div>
+                    <p>Configuring structured web architecture configurations and automating continuous deployment lifecycles over modern distribution platforms.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Creative Panel -->
+        <div id="creative" class="tab-panel">
+            <div class="card-grid">
+                <div class="glass-card">
+                    <div class="card-header-group">
+                        <h3>Editorial Fashion Modeling</h3>
+                        <span class="badge badge-purple">High Fashion</span>
+                    </div>
+                    <p>Executing structured studio collections, aesthetic product layout campaigns, and technical lookbooks utilizing spatial geometry, pacing, and calculated canvas balance.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-header-group">
+                        <h3>Urban Style Environments</h3>
+                        <span class="badge badge-purple">Creative Direction</span>
+                    </div>
+                    <p>Integrating minimalist styling structures with modern architectural landscapes, adapting angles, shadows, and natural illumination arrays.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-tray">
+            <a href="https://github.com" class="social-anchor" target="_blank">GitHub Account</a>
+            <a href="https://www.instagram.com/__cl_ev_er/" class="social-anchor" target="_blank">Instagram Profile</a>
+        </div>
     </div>
+
+    <!-- Interface Logic Logic -->
+    <script>
+        function switchTab(tabId) {
+            // Remove active status from all elements
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Activate selected components
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
