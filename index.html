@@ -299,55 +299,6 @@ body::before {
 .skip-link:focus { top: 20px; }
 
 /* ============================================================
-   PRELOADER
-   ============================================================ */
-.preloader {
-    position: fixed;
-    inset: 0;
-    z-index: 9998;
-    background: #030712; 
-    display: grid;
-    place-items: center;
-    transition: opacity .8s var(--ease-out), visibility .8s;
-    
-    /* 👇 ADD THIS LINE 👇 */
-    animation: hidePreloaderCSS 1s ease 2s forwards;
-}
-
-/* 👇 ADD THIS NEW KEYFRAME BLOCK RIGHT BELOW .preloader 👇 */
-@keyframes hidePreloaderCSS {
-    0% { opacity: 1; visibility: visible; }
-    100% { opacity: 0; visibility: hidden; display: none; }
-}
-.preloader.done { opacity: 0; visibility: hidden; }
-
-.preloader-mark {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 700;
-    letter-spacing: -.06em;
-    background: linear-gradient(110deg, var(--accent), var(--secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: preloadPulse 1.4s var(--ease-out) infinite;
-}
-@keyframes preloadPulse {
-    0%, 100% { opacity: .4; transform: scale(.96); }
-    50%      { opacity: 1;  transform: scale(1); }
-}
-
-.preloader-bar {
-    position: absolute;
-    bottom: 0; left: 0;
-    height: 2px;
-    width: 0%;
-    background: linear-gradient(90deg, var(--accent), var(--secondary));
-    animation: preloadBar 1.6s var(--ease-out) forwards;
-}
-@keyframes preloadBar { to { width: 100%; } }
-
-/* ============================================================
    NAVIGATION
    ============================================================ */
 .navbar {
@@ -1680,14 +1631,9 @@ body::before {
 </head>
 
 <body>
-
-<!-- ============ PRELOADER ============ -->
-<div class="preloader" id="preloader">
-    <div class="preloader-mark">M</div>
-    <div class="preloader-bar"></div>
-</div>
-
+  
 <!-- ============ CUSTOM CURSOR ============ -->
+  
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
@@ -2365,21 +2311,6 @@ document.getElementById("themeReset")?.addEventListener("click", () => {
     applyTheme("dark", "cyan", null);
 });
 
-/* ============================================================
-   PRELOADER
-   ============================================================ */
-function hidePreloader() {
-    const preloader = document.getElementById("preloader");
-    if (preloader && !preloader.classList.contains("done")) {
-        preloader.classList.add("done");
-    }
-}
-
-// 1. Try to hide when everything is fully loaded
-window.addEventListener("load", () => setTimeout(hidePreloader, 600));
-
-// 2. The failsafe: Force hide after 1.5 seconds no matter what
-setTimeout(hidePreloader, 1500);
 /* ============================================================
    ICONS
    ============================================================ */
