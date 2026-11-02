@@ -2366,6 +2366,11 @@ function hidePreloader() {
     }
 }
 
+// 1. Try to hide when everything is fully loaded
+window.addEventListener("load", () => setTimeout(hidePreloader, 600));
+
+// 2. The failsafe: Force hide after 1.5 seconds no matter what
+setTimeout(hidePreloader, 1500);
 /* ============================================================
    ICONS
    ============================================================ */
