@@ -4,11 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mukunzi Clever | Software Engineer & Model</title>
-<meta name="description" content="Mukunzi Clever — Software Engineer and Model. Full-stack developer building scalable web apps, plus a creative modeling portfolio.">
+
+<!-- Primary SEO Meta Tags -->
+<meta name="google-site-verification" content="aOnnAh5WAXtnAQButGjML8dzlq210vYOaNWu6E07WpE" />
+<meta name="description" content="Mukunzi Clever is a Rwanda-based Software Development Engineer and Model. He builds scalable full-stack web applications, database systems, and works in fashion and visual storytelling.">
+<meta name="keywords" content="Mukunzi Clever, Software Engineer, Full-Stack Developer, Model, Rwanda, Kigali, Huye, Web Development, PHP, Python, JavaScript, MySQL, MongoDB, Git, Portfolio">
+<meta name="author" content="Mukunzi Clever">
+
+<!-- Open Graph / Social Media Meta Tags -->
+<meta property="og:title" content="Mukunzi Clever | Software Engineer & Model">
+<meta property="og:description" content="Rwanda-based Software Development Engineer and Model building modern, scalable full-stack web applications and database systems.">
+<meta property="og:url" content="https://programmerclever.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="https://programmerclever.github.io/images/profile.jpg">
+<meta property="og:image:alt" content="Mukunzi Clever - Software Engineer and Model">
+<meta property="og:locale" content="en_US">
+<meta property="profile:first_name" content="Mukunzi">
+<meta property="profile:last_name" content="Clever">
+
+<!-- Twitter Card (optional but recommended) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mukunzi Clever | Software Engineer & Model">
+<meta name="twitter:description" content="Rwanda-based Software Development Engineer and Model building modern, scalable full-stack web applications and database systems.">
+<meta name="twitter:image" content="https://programmerclever.github.io/images/profile.jpg">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://programmerclever.github.io/">
+
+<!-- Fonts & Icons -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- JSON-LD Schema.org Person Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mukunzi Clever",
+  "url": "https://programmerclever.github.io/",
+  "image": "https://programmerclever.github.io/images/profile.jpg",
+  "jobTitle": ["Software Development Engineer", "Full-Stack Developer", "Model"],
+  "description": "Mukunzi Clever is a Rwanda-based Software Development Engineer and Model who builds modern, scalable full-stack web applications and database systems. Alongside developing practical digital platforms—such as School ERP, Tourism Management, and Library Management systems—he works in fashion, portraiture, and visual storytelling to craft strong personal and commercial brands.",
+  "birthDate": "2007-08-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kigali",
+    "addressRegion": "Huye",
+    "addressCountry": "Rwanda"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "LYCEE DE NYANZA"
+  },
+  "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "Python", "MySQL", "MongoDB", "Git", "Full-Stack Development", "Database Design", "Modeling", "Visual Storytelling"],
+  "sameAs": [
+    "https://github.com/ProgrammerClever",
+    "https://www.instagram.com/__cl_ev_er/",
+    "https://www.instagram.com/__cl_ev_er/"
+  ],
+  "email": "mukunziclever77@gmail.com",
+  "parent": {
+    "@type": "Person",
+    "name": "Uwayezu Angelique"
+  },
+  "sibling": {
+    "@type": "Person",
+    "name": "2 siblings"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Freelance"
+  }
+}
+</script>
 
 <style>
 /* ============================================================
@@ -222,6 +292,48 @@ section { padding: 100px 0; }
 .portrait-fallback svg { width: 50px; height: 50px; color: var(--accent); }
 
 /* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: start;
+}
+.about-text p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.about-text p strong { color: var(--text); font-weight: 600; }
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-details .card {
+    padding: 24px;
+}
+.about-details .card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.about-details .card h3 svg {
+    width: 20px;
+    height: 20px;
+    color: var(--accent);
+}
+.about-details .card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ============================================================
    CARDS & GRIDS
    ============================================================ */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -267,6 +379,7 @@ footer {
     .hero-text p { margin-inline: auto; }
     .hero-buttons { justify-content: center; }
     .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .about-content { grid-template-columns: 1fr; gap: 40px; }
     .nav-links { display: none; }
     .mobile-menu-btn { display: grid; }
 }
@@ -294,6 +407,7 @@ footer {
     
     <div class="nav-links">
         <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -320,11 +434,46 @@ footer {
         </div>
         <div class="hero-visual">
             <div class="portrait-box">
-                <img src="images/profile.jpg" alt="Mukunzi Clever" onerror="this.style.display='none'">
+                <img src="images/profile.jpg" alt="Mukunzi Clever - Software Engineer and Model" onerror="this.style.display='none'">
                 <div class="portrait-fallback">
                     <i data-lucide="user"></i>
-                    <span>Add images/profile.jpg</span>
+                    <span>Mukunzi Clever</span>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ABOUT SECTION (visible, crawler-friendly) ============ -->
+<section class="container" id="about">
+    <div class="section-header">
+        <span class="badge">Who I Am</span>
+        <h2>About Me</h2>
+        <p>Get to know the person behind the code and the camera.</p>
+    </div>
+    <div class="about-content">
+        <div class="about-text">
+            <p><strong>Mukunzi Clever</strong> is a 19-year-old Rwanda-based Software Development Engineer and Model, born on <strong>28 August 2007</strong>. He builds modern, scalable full-stack web applications and database systems. He is currently based in Kigali, Rwanda, and also has roots in Huye, Rwanda.</p>
+            <p>Alongside developing practical digital platforms—such as <strong>School ERP</strong>, <strong>Tourism Management</strong>, and <strong>Library Management</strong> systems—he works in fashion, portraiture, and visual storytelling to craft strong personal and commercial brands.</p>
+            <p>He is a graduate of <strong>LYCEE DE NYANZA</strong> (high school) and has since worked as a freelance developer, collaborating on web projects for businesses and organizations. His core technical skills include <strong>HTML, CSS, JavaScript, PHP, Python, MySQL, MongoDB, and Git</strong>.</p>
+            <p>Mukunzi Clever is the child of <strong>Uwayezu Angelique</strong> and has <strong>2 siblings</strong>. Whether he is architecting a database, designing a user interface, or standing in front of a camera, he brings the same attention to detail and creative problem-solving to every project.</p>
+        </div>
+        <div class="about-details">
+            <div class="card">
+                <h3><i data-lucide="cake"></i> Birthday & Age</h3>
+                <p>28 August 2007 (19 years old)</p>
+            </div>
+            <div class="card">
+                <h3><i data-lucide="map-pin"></i> Location</h3>
+                <p>Kigali, Rwanda / Huye, Rwanda</p>
+            </div>
+            <div class="card">
+                <h3><i data-lucide="graduation-cap"></i> Education</h3>
+                <p>LYCEE DE NYANZA (High School)</p>
+            </div>
+            <div class="card">
+                <h3><i data-lucide="users"></i> Family</h3>
+                <p>Parent: Uwayezu Angelique<br>2 siblings</p>
             </div>
         </div>
     </div>
@@ -392,10 +541,10 @@ footer {
         <p>Reach out for collaborations, projects, or just a chat.</p>
     </div>
     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="mailto:YOUR_EMAIL@example.com" class="btn btn-primary">Email Me <i data-lucide="mail"></i></a>
-        <a href="https://github.com/ProgrammerClever" target="_blank" class="btn btn-outline">GitHub</a>
-        <a href="https://instagram.com/__cl_ev_er" target="_blank" class="btn btn-outline">Instagram</a>
-        <a href="https://linkedin.com/in/__cl_ev_er" target="_blank" class="btn btn-outline">LinkedIn</a>
+        <a href="mailto:mukunziclever77@gmail.com" class="btn btn-primary">Email Me <i data-lucide="mail"></i></a>
+        <a href="https://github.com/ProgrammerClever" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+        <a href="https://www.instagram.com/__cl_ev_er/" target="_blank" rel="noopener" class="btn btn-outline">Instagram</a>
+        <a href="https://programmerclever.github.io/" target="_blank" rel="noopener" class="btn btn-outline">Website</a>
     </div>
 </section>
 
