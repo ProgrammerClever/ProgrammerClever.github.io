@@ -6,9 +6,8 @@
 <title>Mukunzi Clever | Software Engineer & Model</title>
 
 <!-- Primary SEO Meta Tags -->
-<meta name="google-site-verification" content="aOnnAh5WAXtnAQButGjML8dzlq210vYOaNWu6E07WpE" />
 <meta name="description" content="Mukunzi Clever is a Rwanda-based Software Development Engineer and Model. He builds scalable full-stack web applications, database systems, and works in fashion and visual storytelling.">
-<meta name="keywords" content="Mukunzi Clever, Software Engineer, Full-Stack Developer, Model, Rwanda, Kigali, Huye, Web Development, PHP, Python, JavaScript, MySQL, MongoDB, Git, Portfolio">
+<meta name="keywords" content="Mukunzi Clever, Software Engineer, Full-Stack Developer, Model, Rwanda, Kigali, Huye, Web Development, PHP, Python, JavaScript, MySQL, MongoDB, Git, Portfolio, height, languages, net worth">
 <meta name="author" content="Mukunzi Clever">
 
 <!-- Open Graph / Social Media Meta Tags -->
@@ -22,7 +21,7 @@
 <meta property="profile:first_name" content="Mukunzi">
 <meta property="profile:last_name" content="Clever">
 
-<!-- Twitter Card (optional but recommended) -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mukunzi Clever | Software Engineer & Model">
 <meta name="twitter:description" content="Rwanda-based Software Development Engineer and Model building modern, scalable full-stack web applications and database systems.">
@@ -48,23 +47,53 @@
   "jobTitle": ["Software Development Engineer", "Full-Stack Developer", "Model"],
   "description": "Mukunzi Clever is a Rwanda-based Software Development Engineer and Model who builds modern, scalable full-stack web applications and database systems. Alongside developing practical digital platforms—such as School ERP, Tourism Management, and Library Management systems—he works in fashion, portraiture, and visual storytelling to craft strong personal and commercial brands.",
   "birthDate": "2007-08-28",
+  "height": {
+    "@type": "QuantitativeValue",
+    "value": 180,
+    "unitCode": "CMT"
+  },
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Kigali",
     "addressRegion": "Huye",
     "addressCountry": "Rwanda"
   },
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "LYCEE DE NYANZA"
-  },
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Faith Preparatory Academy"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Groupe Scolaire Mere de Verbe"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Lycée de Nyanza"
+    }
+  ],
   "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "Python", "MySQL", "MongoDB", "Git", "Full-Stack Development", "Database Design", "Modeling", "Visual Storytelling"],
+  "knowsLanguage": [
+    {
+      "@type": "Language",
+      "name": "Kinyarwanda"
+    },
+    {
+      "@type": "Language",
+      "name": "English"
+    },
+    {
+      "@type": "Language",
+      "name": "French"
+    }
+  ],
   "sameAs": [
     "https://github.com/ProgrammerClever",
     "https://www.instagram.com/__cl_ev_er/",
     "https://www.instagram.com/__cl_ev_er/"
   ],
   "email": "mukunziclever77@gmail.com",
+  "telephone": "+250726708360",
   "parent": {
     "@type": "Person",
     "name": "Uwayezu Angelique"
@@ -76,7 +105,74 @@
   "worksFor": {
     "@type": "Organization",
     "name": "Freelance"
-  }
+  },
+  "netWorth": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": 10000
+  },
+  "owns": {
+    "@type": "Product",
+    "name": "iPhone 13 Pro Max"
+  },
+  "hobby": ["Digital Art", "Photography", "Blogging"],
+  "friend": [
+    { "@type": "Person", "name": "Igiraneza Jotham" },
+    { "@type": "Person", "name": "Safari Bright" },
+    { "@type": "Person", "name": "Inezayimana Christian" },
+    { "@type": "Person", "name": "Ishimwe Cedrick" },
+    { "@type": "Person", "name": "Mugisha Arsene" }
+  ]
+}
+</script>
+
+<!-- JSON-LD Schema.org FAQPage Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How tall is Mukunzi Clever?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mukunzi Clever is 180 cm (5 feet 11 inches) tall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages does Mukunzi Clever speak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mukunzi Clever speaks Kinyarwanda, English, and French."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Mukunzi Clever's net worth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mukunzi Clever's estimated net worth is approximately $10,000 USD (about 14,770,910 RWF), reflecting a growing freelance software and modeling portfolio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact Mukunzi Clever?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can contact Mukunzi Clever by email at mukunziclever77@gmail.com or by phone at +250 726 708 360."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Mukunzi Clever's birthday?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mukunzi Clever was born on 28 August 2007 and is currently 19 years old."
+      }
+    }
+  ]
 }
 </script>
 
@@ -334,6 +430,116 @@ section { padding: 100px 0; }
 }
 
 /* ============================================================
+   FACT CARDS SECTION
+   ============================================================ */
+.fact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.fact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: transform var(--transition), border-color var(--transition);
+    text-align: center;
+}
+.fact-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.fact-card .fact-icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: grid; place-items: center;
+    margin: 0 auto 16px;
+}
+.fact-card .fact-icon svg { width: 22px; height: 22px; }
+.fact-card h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.fact-card p {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+/* ============================================================
+   FRIENDS / APPRECIATION SECTION
+   ============================================================ */
+.friend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.friend-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: transform var(--transition), border-color var(--transition);
+}
+.friend-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.friend-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--accent);
+}
+.friend-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ============================================================
+   FAQ SECTION
+   ============================================================ */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 30px;
+    transition: border-color var(--transition);
+}
+.faq-item:hover { border-color: var(--accent); }
+.faq-item h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+.faq-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   CONTACT SECTION
+   ============================================================ */
+.contact-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
    CARDS & GRIDS
    ============================================================ */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -380,6 +586,8 @@ footer {
     .hero-buttons { justify-content: center; }
     .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
     .about-content { grid-template-columns: 1fr; gap: 40px; }
+    .fact-grid { grid-template-columns: repeat(2, 1fr); }
+    .friend-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .mobile-menu-btn { display: grid; }
 }
@@ -387,6 +595,7 @@ footer {
 @media (max-width: 600px) {
     .hero-text h1 { font-size: 2.5rem; }
     .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .fact-grid { grid-template-columns: 1fr; }
     .hero-buttons { flex-direction: column; }
 }
 </style>
@@ -408,8 +617,10 @@ footer {
     <div class="nav-links">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
+        <a href="#facts">Facts</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
     </div>
 
@@ -444,7 +655,7 @@ footer {
     </div>
 </section>
 
-<!-- ============ ABOUT SECTION (visible, crawler-friendly) ============ -->
+<!-- ============ ABOUT SECTION ============ -->
 <section class="container" id="about">
     <div class="section-header">
         <span class="badge">Who I Am</span>
@@ -455,8 +666,8 @@ footer {
         <div class="about-text">
             <p><strong>Mukunzi Clever</strong> is a 19-year-old Rwanda-based Software Development Engineer and Model, born on <strong>28 August 2007</strong>. He builds modern, scalable full-stack web applications and database systems. He is currently based in Kigali, Rwanda, and also has roots in Huye, Rwanda.</p>
             <p>Alongside developing practical digital platforms—such as <strong>School ERP</strong>, <strong>Tourism Management</strong>, and <strong>Library Management</strong> systems—he works in fashion, portraiture, and visual storytelling to craft strong personal and commercial brands.</p>
-            <p>He is a graduate of <strong>LYCEE DE NYANZA</strong> (high school) and has since worked as a freelance developer, collaborating on web projects for businesses and organizations. His core technical skills include <strong>HTML, CSS, JavaScript, PHP, Python, MySQL, MongoDB, and Git</strong>.</p>
-            <p>Mukunzi Clever is the child of <strong>Uwayezu Angelique</strong> and has <strong>2 siblings</strong>. Whether he is architecting a database, designing a user interface, or standing in front of a camera, he brings the same attention to detail and creative problem-solving to every project.</p>
+            <p>He attended <strong>Faith Preparatory Academy</strong>, <strong>Groupe Scolaire Mere de Verbe</strong>, and currently studies at <strong>Lycée de Nyanza</strong>. His core technical skills include <strong>HTML, CSS, JavaScript, PHP, Python, MySQL, MongoDB, and Git</strong>.</p>
+            <p>Mukunzi Clever is the child of <strong>Uwayezu Angelique</strong> and has <strong>2 siblings</strong>. In his free time, he builds digital art, photography, and blogs just for fun and to test new ideas. He is an avid fan of PES2026 and GTA VI, enjoys music by Don Toliver and Chris Brown, and his favorite tool is his camera. His current daily driver is an iPhone 13 Pro Max.</p>
         </div>
         <div class="about-details">
             <div class="card">
@@ -469,7 +680,7 @@ footer {
             </div>
             <div class="card">
                 <h3><i data-lucide="graduation-cap"></i> Education</h3>
-                <p>LYCEE DE NYANZA (High School)</p>
+                <p>Faith Preparatory Academy<br>Groupe Scolaire Mere de Verbe<br>Lycée de Nyanza (Current)</p>
             </div>
             <div class="card">
                 <h3><i data-lucide="users"></i> Family</h3>
@@ -479,6 +690,89 @@ footer {
     </div>
 </section>
 
+<!-- ============ FACT CARDS SECTION ============ -->
+<section class="container" id="facts">
+    <div class="section-header">
+        <span class="badge">Quick Facts</span>
+        <h2>Personal Profile</h2>
+        <p>Key facts about Mukunzi Clever at a glance.</p>
+    </div>
+    <div class="fact-grid">
+        <div class="fact-card">
+            <div class="fact-icon"><i data-lucide="ruler"></i></div>
+            <h3>Height</h3>
+            <p>180 cm / 5'11"</p>
+        </div>
+        <div class="fact-card">
+            <div class="fact-icon"><i data-lucide="languages"></i></div>
+            <h3>Languages</h3>
+            <p>Kinyarwanda, English, French</p>
+        </div>
+        <div class="fact-card">
+            <div class="fact-icon"><i data-lucide="wallet"></i></div>
+            <h3>Estimated Net Worth</h3>
+            <p>$10,000 USD / 14,770,910 RWF</p>
+        </div>
+        <div class="fact-card">
+            <div class="fact-icon"><i data-lucide="smartphone"></i></div>
+            <h3>Daily Driver</h3>
+            <p>iPhone 13 Pro Max</p>
+        </div>
+        <div class="fact-card">
+            <div class="fact-icon"><i data-lucide="mail"></i></div>
+            <h3>Email</h3>
+            <p>mukunziclever77@gmail.com</p>
+        </div>
+        <div class="fact-card">
+            <div class="fact-icon"><i data-lucide="phone"></i></div>
+            <h3>Phone</h3>
+            <p>+250 726 708 360</p>
+        </div>
+        <div class="fact-card">
+            <div class="fact-icon"><i data-lucide="gamepad-2"></i></div>
+            <h3>Favorite Games</h3>
+            <p>PES2026, GTA VI</p>
+        </div>
+        <div class="fact-card">
+            <div class="fact-icon"><i data-lucide="music"></i></div>
+            <h3>Music Taste</h3>
+            <p>Don Toliver, Chris Brown</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FRIENDS / APPRECIATION SECTION ============ -->
+<section class="container" id="friends">
+    <div class="section-header">
+        <span class="badge">Close Friends</span>
+        <h2>Appreciation</h2>
+        <p>The people who make the journey worthwhile.</p>
+    </div>
+    <div class="friend-grid">
+        <div class="friend-card">
+            <h3>Igiraneza Jotham</h3>
+            <p>Always knows how to make me laugh and never fails to bring good energy to the room.</p>
+        </div>
+        <div class="friend-card">
+            <h3>Safari Bright</h3>
+            <p>Someone I can always count on for honest advice and late-night conversations.</p>
+        </div>
+        <div class="friend-card">
+            <h3>Inezayimana Christian</h3>
+            <p>Grateful for all the spontaneous adventures and good memories we've shared over the years.</p>
+        </div>
+        <div class="friend-card">
+            <h3>Ishimwe Cedrick</h3>
+            <p>Thanks to your connections you are my db.connection — always brings positive energy and the best sense of humor to every hangout.</p>
+        </div>
+        <div class="friend-card">
+            <h3>Mugisha Arsene</h3>
+            <p>Thanks for always pushing me to try new things and stay creative.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SKILLS SECTION ============ -->
 <section class="container" id="skills">
     <div class="section-header">
         <span class="badge">My Expertise</span>
@@ -509,6 +803,7 @@ footer {
     </div>
 </section>
 
+<!-- ============ PROJECTS SECTION ============ -->
 <section class="container" id="projects">
     <div class="section-header">
         <span class="badge">Selected Work</span>
@@ -534,14 +829,51 @@ footer {
     </div>
 </section>
 
+<!-- ============ FAQ SECTION ============ -->
+<section class="container" id="faq">
+    <div class="section-header">
+        <span class="badge">Questions & Answers</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about Mukunzi Clever, answered clearly.</p>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <h3>How tall is Mukunzi Clever?</h3>
+            <p>Mukunzi Clever is 180 cm (5 feet 11 inches) tall.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What languages does Mukunzi Clever speak?</h3>
+            <p>Mukunzi Clever speaks Kinyarwanda, English, and French.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is Mukunzi Clever's net worth?</h3>
+            <p>Mukunzi Clever's estimated net worth is approximately $10,000 USD (about 14,770,910 RWF), reflecting a growing freelance software and modeling portfolio.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I contact Mukunzi Clever?</h3>
+            <p>You can contact Mukunzi Clever by email at mukunziclever77@gmail.com or by phone at +250 726 708 360.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is Mukunzi Clever's birthday?</h3>
+            <p>Mukunzi Clever was born on 28 August 2007 and is currently 19 years old.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Where is Mukunzi Clever from?</h3>
+            <p>Mukunzi Clever is based in Kigali, Rwanda, and also has roots in Huye, Rwanda.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
 <section class="container" id="contact" style="text-align: center;">
     <div class="section-header">
         <span class="badge">Get In Touch</span>
         <h2>Let's Build Something Together</h2>
         <p>Reach out for collaborations, projects, or just a chat.</p>
     </div>
-    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+    <div class="contact-buttons">
         <a href="mailto:mukunziclever77@gmail.com" class="btn btn-primary">Email Me <i data-lucide="mail"></i></a>
+        <a href="tel:+250726708360" class="btn btn-outline">Call Me <i data-lucide="phone"></i></a>
         <a href="https://github.com/ProgrammerClever" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
         <a href="https://www.instagram.com/__cl_ev_er/" target="_blank" rel="noopener" class="btn btn-outline">Instagram</a>
         <a href="https://programmerclever.github.io/" target="_blank" rel="noopener" class="btn btn-outline">Website</a>
